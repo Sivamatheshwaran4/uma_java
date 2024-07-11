@@ -1,0 +1,41 @@
+//sumOfTwoArray :
+System.out.println("Sum Of Two Array Using stream --------");
+IntStream.range(0, arr1.length).map(i -> arr1[i] + arr2[i]).toArray();
+
+//Array Iteration : 
+System.out.println(Arrays.toString(arr2));
+
+//remove Space
+String spaceRemove=   str.replaceAll("\\p{Zs}",""); 
+String characterRemove=   str.replaceAll("\\p{L}+","");  // replace charactor
+String  NumberRemove=  str2.replaceAll("\\p{N}","");
+
+// Count uppercase characters
+long countFlt = str.chars()  // Get IntStream of characters
+                .filter(Character::isUpperCase)  // Filter uppercase characters
+                .count();
+
+System.out.println("Current Local Date: " + java.time.LocalDate.now());
+//Used LocalDate API to get the date
+System.out.println("Current Local Time: " + java.time.LocalTime.now());
+//Used LocalTime API to get the time
+System.out.println("Current Local Date and Time: " + java.time.LocalDateTime.now());
+//Used LocalDateTime API to get both date and time
+
+// Intersection_Two_Arrays
+Set<Integer> list2 = Arrays.stream(array2).boxed().filter(list1::contains).collect(Collectors.toSet());
+
+// Reversev Array
+IntStream.range(0, list.size()).mapToObj(m -> list.get(list.size()-1-m)).forEach(System.out::println);
+
+// Concat interger array 
+IntStream.concat(Arrays.stream(arr1), Arrays.stream(arr2)).sorted().distinct().toArray();
+
+// Concat String array
+Stream.concat(Arrays.stream(arr1), Arrays.stream(arr2)).sorted().distinct().toArray();
+
+// stream method
+Long - mapToLong(Long::longValue).sum();
+Int - mapToInt(Integer::intValue).sum();
+Double - mapToDouble(x -> ((double)x).sum(); 
+Int - mapToInt(e -> e ) 
